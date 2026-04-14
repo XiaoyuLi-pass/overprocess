@@ -9,6 +9,13 @@ data class MutatorConfig(
     val mutateParameterNullabilityWeight: Int = 2,
     val mutateClassTypeParameterUpperBoundNullabilityWeight: Int = 1,
     val mutateClassTypeParameterUpperBoundWeight: Int = 3,
+    // ========== 新增的变异函数权重 ==========
+    // 函数相关
+    val mutateFunctionReturnTypeWeight: Int = 10,
+    val addFunctionParameterWeight: Int = 8,
+    val removeFunctionParameterWeight: Int = 7,
+    val swapFunctionParametersWeight: Int = 6,
+    val mutateFunctionModifierWeight: Int = 5,
 ) {
     companion object {
         @JvmStatic
