@@ -1,0 +1,16 @@
+[main] INFO  com.github.xyzboom.codesmith.kotlin.CrossLangFuzzerKotlinRunner.runnerMain(CrossLangFuzzerKotlinRunner.kt:265) [] - start kotlin runner
+[main] INFO  com.github.xyzboom.codesmith.kotlin.CrossLangFuzzerKotlinRunner.runnerMain(CrossLangFuzzerKotlinRunner.kt:265) [] - start kotlin runner
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:106) [] - {}
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:107) [] - compile times: 60
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:106) [] - {}
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:107) [] - compile times: 120
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:106) [] - {}
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:107) [] - compile times: 180
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:106) [] - {}
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:107) [] - compile times: 274
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:106) [] - {}
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:107) [] - compile times: 368
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:106) [] - {}
+[main] INFO  com.github.xyzboom.codesmith.groovy.CodeSmithGroovyRunner.runDifferential(CodeSmithGroovyRunner.kt:107) [] - compile times: 462
+[main] INFO  com.github.xyzboom.codesmith.kotlin.CrossLangFuzzerKotlinRunner.runnerMain(CrossLangFuzzerKotlinRunner.kt:265) [] - start kotlin runner
+[main] INFO  com.github.xyzboom.codesmith.scala.CrossLangFuzzerScalaRunner.runnerMain(CrossLangFuzzerScalaRunner.kt:184) [] - start scala runner

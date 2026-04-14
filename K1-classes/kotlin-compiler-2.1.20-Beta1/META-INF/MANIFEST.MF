@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Vendor: JetBrains
+Implementation-Title: kotlin-compiler
+Implementation-Version: 2.1.20-Beta1-release-34
+Class-Path: annotations-13.0.jar kotlin-stdlib.jar kotlin-reflect.jar ko
+ tlin-script-runtime.jar trove4j.jar kotlinx-coroutines-core-jvm.jar
+Main-Class: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler
+
