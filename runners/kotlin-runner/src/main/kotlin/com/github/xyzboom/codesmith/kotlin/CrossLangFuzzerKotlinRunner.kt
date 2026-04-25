@@ -101,7 +101,14 @@ class CrossLangFuzzerKotlinRunner : CommonCompilerRunner("kotlin") {
     private val jacocoAgentPath: String by option("--jacoco-path")
         .default("E:/overprocess/CrossLangFuzzer/tool/jacoco-0.8.12/lib/jacocoagent.jar")
         .help("Path to JaCoCo agent JAR")
+    // 新增：JDK 路径参数
+    private val jdk11Home: String by option("--jdk8-home")
+        .default("E:/Java11/jdk-11.0.29")
+        .help("Path to JDK 11 (used by K1 compiler and javac for Java 11)")
 
+    private val jdk17Home: String by option("--jdk17-home")
+        .default("E:/JAVA17/jdk-17.0.17")
+        .help("Path to JDK 17 (used by K2 compiler and javac for Java 17)")
     // ========== 能量调度相关 ==========
 
     data class Seed(
@@ -144,12 +151,14 @@ class CrossLangFuzzerKotlinRunner : CommonCompilerRunner("kotlin") {
             ForkedK1Compiler(
                 jdk = TestJdkKind.FULL_JDK,
                 kotlinCompilerClasspath = buildCompilerClasspath(k1CompilerPath),
-                jacocoAgentPath = jacocoAgentPath
+                jacocoAgentPath = jacocoAgentPath,
+                jdkHome = jdk11Home
             ),
             ForkedKotlinCompiler(
                 jdk = TestJdkKind.FULL_JDK_17,
                 kotlinCompilerClasspath = buildCompilerClasspath(k2CompilerPath),
-                jacocoAgentPath = jacocoAgentPath
+                jacocoAgentPath = jacocoAgentPath,
+                        jdkHome = jdk17Home
             )
         )
     }
@@ -850,7 +859,7 @@ private val startTime = kotlin.time.TimeSource.Monotonic.markNow()
 private fun getCoverageReader(): JacocoCoverageReader {
     if (coverageReader == null) {
         coverageReader = JacocoCoverageReader(
-            File("jacoco-output/jacoco.exec"),
+            File("jacoco-output/jacoco-k2.exec"),
             File("compiler-classes")
         )
     }
@@ -877,7 +886,7 @@ private fun saveInterestingProgram(program: IrProgram, coverage: Int) {
 }
 
 fun main(args: Array<String>) {
-    File("jacoco-output/jacoco.exec").takeIf { it.exists() }?.delete()?.let { println("Old coverage K2 file deleted") }
+    File("jacoco-output/jacoco-k2.exec").takeIf { it.exists() }?.delete()?.let { println("Old coverage K2 file deleted") }
     File("jacoco-output/k1.exec").takeIf { it.exists() }?.delete()?.let { println("Old coverage K1 file deleted") }
     CrossLangFuzzerKotlinRunner().main(args)
 
